@@ -1,0 +1,108 @@
+site_name: StayMate Documentation
+site_description: Production-grade rental & roommate platform documentation.
+site_author: StayMate Engineering Team
+repo_url: https://github.com/pacman-cli/StayMate
+repo_name: pacman-cli/StayMate
+copyright: Copyright &copy; 2026 StayMate
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Introduction:
+    - Overview: introduction/overview.md
+    - Motivation: introduction/motivation.md
+    - Problem Statement: introduction/problem-statement.md
+  - Features:
+    - Property Management: features/property-management.md
+    - Booking System: features/booking-system.md
+    - Roommate Matching: features/roommate-matching.md
+    - AI Matching: features/ai-matching.md
+    - Amenities: features/amenities.md
+    - Notifications: features/notifications.md
+    - Dashboards: features/dashboards.md
+  - Architecture:
+    - System Overview: architecture/system-overview.md
+    - Backend: architecture/backend.md
+    - Frontend: architecture/frontend.md
+    - Database: architecture/database.md
+    - Database Diagram: architecture/database-diagram.md
+    - AI Architecture: architecture/ai-architecture.md
+  - API Reference:
+    - Authentication: api/authentication.md
+    - Users: api/users.md
+    - Properties: api/properties.md
+    - Bookings: api/bookings.md
+    - Roommate Matching: api/roommate.md
+    - Reviews: api/reviews.md
+    - Amenities: api/amenities.md
+    - Earnings: api/earnings.md
+  - Performance & Scaling:
+    - Load Testing: performance/load-testing.md
+    - JMeter Guide: performance/jmeter.md
+    - Scaling Strategy: performance/scaling.md
+  - Security:
+    - Roles & Permissions: security/roles.md
+    - Data Protection: security/data-protection.md
+  - Setup & Deployment:
+    - Local Setup: setup/local-setup.md
+    - Docker: setup/docker.md
+    - Environment Variables: setup/environment.md
+  - Community:
+    - Contributors: contribution/contributors.md
+    - Coding Standards: contribution/coding-standards.md
